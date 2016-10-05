@@ -17,6 +17,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let manager = ColorServiceManager ()
     var managerSingleton = ColorServiceManager.getHASingleton()
 
+    @IBAction func reloadButton(_ sender: AnyObject) {
+            self.collection.reloadData()
+    }
+
     
     @IBAction func cameraButton(_ sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
@@ -41,7 +45,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return managerSingleton.images.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -67,6 +71,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         manager.sendImage(img: image)
         //self.collection.reloadData()
+        self.dismiss(animated: true, completion: nil)
     }
 
 }
