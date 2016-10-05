@@ -50,7 +50,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //        cell.imageView.image = images[indexPath.row]
         print ("cell: \(cell)")
         print ("indexPath.row: ", indexPath.row)
+
        // cell.imageView.image = managerSingleton.images[indexPath.row]
+        cell.imageView.image = managerSingleton.images[indexPath.row]
+
+
         
         if managerSingleton.images.count != 0 {
             cell.imageView.image = managerSingleton.images[indexPath.row]

@@ -16,7 +16,11 @@ class ColorServiceManager: NSObject {
 
     static var managerSingleton = ColorServiceManager()
     static func getHASingleton() -> ColorServiceManager {
+<<<<<<< Updated upstream
         return managerSingleton
+=======
+            return managerSingleton
+>>>>>>> Stashed changes
     }
     
     // advertiser
@@ -36,8 +40,8 @@ class ColorServiceManager: NSObject {
     } ()
     
     override init () {
-        self.serviceAdvertiser = MCNearbyServiceAdvertiser (peer: myPeerId, discoveryInfo: nil, serviceType: ColorServiceType)
-        self.serviceBrowser = MCNearbyServiceBrowser (peer: myPeerId, serviceType: ColorServiceType)
+        self.serviceAdvertiser = MCNearbyServiceAdvertiser (peer: myPeerId, discoveryInfo: nil, serviceType: "string")
+        self.serviceBrowser = MCNearbyServiceBrowser (peer: myPeerId, serviceType: "string")
         
         super.init ()
         
