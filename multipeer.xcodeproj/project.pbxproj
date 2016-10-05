@@ -152,7 +152,7 @@
 				TargetAttributes = {
 					4F1AFF4B1DA3FA5800C5D425 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 7S5BW22U4Y;
+						DevelopmentTeam = R3VU9CJ4FV;
 						ProvisioningStyle = Automatic;
 					};
 					4F1AFF5F1DA3FA5900C5D425 = {
@@ -348,7 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7S5BW22U4Y;
+				DEVELOPMENT_TEAM = R3VU9CJ4FV;
 				INFOPLIST_FILE = multipeer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "bepid-apple.multipeer";
@@ -361,7 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7S5BW22U4Y;
+				DEVELOPMENT_TEAM = R3VU9CJ4FV;
 				INFOPLIST_FILE = multipeer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "bepid-apple.multipeer";

@@ -36,8 +36,8 @@ class ColorServiceManager: NSObject {
     } ()
     
     override init () {
-        self.serviceAdvertiser = MCNearbyServiceAdvertiser (peer: myPeerId, discoveryInfo: nil, serviceType: ColorServiceType)
-        self.serviceBrowser = MCNearbyServiceBrowser (peer: myPeerId, serviceType: ColorServiceType)
+        self.serviceAdvertiser = MCNearbyServiceAdvertiser (peer: myPeerId, discoveryInfo: nil, serviceType: nil)
+        self.serviceBrowser = MCNearbyServiceBrowser (peer: myPeerId, serviceType: nil)
         
         super.init ()
         
