@@ -145,9 +145,10 @@ extension ColorServiceManager: MCSessionDelegate {
     
     // Receiving data from the other side
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+        print ("didReceiveData: \(data.count) bytes") //TA IMPRIMINDO
         if let image = UIImage(data: data) {
             DispatchQueue.main.async { [unowned self] in
-                // do something with the image
+                 //do something with the image
                 self.images.append(image)
             }
         }
