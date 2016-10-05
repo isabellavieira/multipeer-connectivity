@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var images:[UIImage] = []
+   // var images:[UIImage] = []
 
     @IBOutlet weak var collection: UICollectionView!
+    
+    let manager = ColorServiceManager ()
+
     
     @IBAction func cameraButton(_ sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
@@ -50,6 +53,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        manager.sendImage(img: image)
 
     }
 

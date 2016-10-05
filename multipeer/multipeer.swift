@@ -12,6 +12,8 @@ import MultipeerConnectivity
 class ColorServiceManager: NSObject {
     private let ColorServiceType = "example-color"
     private let myPeerId = MCPeerID(displayName: UIDevice.current.name)
+    var images:[UIImage] = []
+
     
     // advertiser
     private var serviceAdvertiser : MCNearbyServiceAdvertiser
@@ -68,23 +70,22 @@ class ColorServiceManager: NSObject {
                 } catch let error as NSError {
                     let ac = UIAlertController(title: "Send error", message: error.localizedDescription, preferredStyle: .alert)
                     ac.addAction(UIAlertAction(title: "OK", style: .default))
-                    present(ac, animated: true)
+                   // present(ac, animated: true)
                 }
             }
         }
     }
     
     // Receiving data from the other side
-    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID, images:[UIImage]) {
-        if UIImage(data: data) != nil {
+    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+        if let image = UIImage(data: data) {
             DispatchQueue.main.async { [unowned self] in
                 // do something with the image
-                images.append(data)
+                images.append(image)
             }
         }
     }
 
-    
     
 }
 
