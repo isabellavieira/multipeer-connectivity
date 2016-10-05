@@ -48,13 +48,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! Cell
 //        cell.imageView.image = images[indexPath.row]
-<<<<<<< Updated upstream
-=======
         print ("cell: \(cell)")
         print ("indexPath.row: ", indexPath.row)
-        cell.imageView.image = managerSingleton.images[indexPath.row]
-
->>>>>>> Stashed changes
+       // cell.imageView.image = managerSingleton.images[indexPath.row]
         
         if managerSingleton.images.count != 0 {
             cell.imageView.image = managerSingleton.images[indexPath.row]

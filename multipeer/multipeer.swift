@@ -16,7 +16,6 @@ class ColorServiceManager: NSObject {
 
     static var managerSingleton = ColorServiceManager()
     static func getHASingleton() -> ColorServiceManager {
-        print ("managerSingleton: \(managerSingleton)"
         return managerSingleton
     }
     
