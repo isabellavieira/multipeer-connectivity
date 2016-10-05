@@ -10,7 +10,7 @@ import Foundation
 import MultipeerConnectivity
 
 class ColorServiceManager: NSObject {
-    private let ColorServiceType = "example-color"
+    private let ColorServiceType = "image"
     private let myPeerId = MCPeerID(displayName: UIDevice.current.name)
     var images:[UIImage] = []
 
@@ -36,8 +36,8 @@ class ColorServiceManager: NSObject {
     } ()
     
     override init () {
-        self.serviceAdvertiser = MCNearbyServiceAdvertiser (peer: myPeerId, discoveryInfo: nil, serviceType: nil)
-        self.serviceBrowser = MCNearbyServiceBrowser (peer: myPeerId, serviceType: nil)
+        self.serviceAdvertiser = MCNearbyServiceAdvertiser (peer: myPeerId, discoveryInfo: nil, serviceType: ColorServiceType)
+        self.serviceBrowser = MCNearbyServiceBrowser (peer: myPeerId, serviceType: ColorServiceType)
         
         super.init ()
         
