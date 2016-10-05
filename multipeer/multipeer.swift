@@ -67,7 +67,9 @@ class ColorServiceManager: NSObject {
     
     var mcSession: MCSession!
     func sendImage(img: UIImage) {
+        print(">>>>>>>>>>>>>>>ENTREI")
         if mcSession.connectedPeers.count > 0 {
+            print("CONNECTED PEERS: \(mcSession.connectedPeers.count)")
             if let imageData = UIImagePNGRepresentation(img) {
                 do {
                     try mcSession.send(imageData, toPeers: mcSession.connectedPeers, with: .reliable)

@@ -30,8 +30,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -50,10 +48,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! Cell
 //        cell.imageView.image = images[indexPath.row]
-        cell.imageView.image = managerSingleton.images[indexPath.row]
-
         
-        return cell
+        if managerSingleton.images.count != 0 {
+            cell.imageView.image = managerSingleton.images[indexPath.row]
+            return cell
+        } else {
+            return cell
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
