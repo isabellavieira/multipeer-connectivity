@@ -75,16 +75,6 @@ class ColorServiceManager: NSObject {
             }
         }
     }
-    
-    // Receiving data from the other side
-    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        if let image = UIImage(data: data) {
-            DispatchQueue.main.async { [unowned self] in
-                // do something with the image
-                images.append(image)
-            }
-        }
-    }
 
     
 }
@@ -140,11 +130,23 @@ extension ColorServiceManager: MCSessionDelegate {
         self.delegate?.connectedDeviceChanged(manager:self, connectedDevices: session.connectedPeers.map({$0.displayName}))
     }
     
-    func session (_ session:MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+   /* func session (_ session:MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         print ("didReceiveData: \(data.count) bytes")
         let str = NSString(data:data, encoding: String.Encoding.utf8.rawValue) as! String
         self.delegate?.colorChanged(manager:self, colorString: str)
+    } */
+    
+    // Receiving data from the other side
+    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+        if let image = UIImage(data: data) {
+            DispatchQueue.main.async { [unowned self] in
+                // do something with the image
+                self.images.append(image)
+            }
+        }
+        print ("Images: \(images)")
     }
+
     
     func session (_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {}
     

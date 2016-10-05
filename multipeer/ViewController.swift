@@ -46,7 +46,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! Cell
-        cell.imageView.image = self.images[indexPath.row]
+        cell.imageView.image = images[indexPath.row]
         
         return cell
     }
@@ -54,7 +54,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         manager.sendImage(img: image)
-
     }
 
 }
