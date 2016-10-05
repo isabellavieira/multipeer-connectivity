@@ -15,6 +15,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var collection: UICollectionView!
     
     let manager = ColorServiceManager ()
+    var managerSingleton = ColorServiceManager.getHASingleton()
 
     
     @IBAction func cameraButton(_ sender: AnyObject) {
@@ -28,6 +29,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.present(picker, animated: true, completion: nil)
         }
     }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +49,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! Cell
-        cell.imageView.image = images[indexPath.row]
+//        cell.imageView.image = images[indexPath.row]
+        cell.imageView.image = managerSingleton.images[indexPath.row]
+
         
         return cell
     }
@@ -57,4 +62,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 
 }
+
+
 

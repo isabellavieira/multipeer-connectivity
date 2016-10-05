@@ -14,6 +14,10 @@ class ColorServiceManager: NSObject {
     private let myPeerId = MCPeerID(displayName: UIDevice.current.name)
     var images:[UIImage] = []
 
+    static var managerSingleton = ColorServiceManager()
+    static func getHASingleton() -> ColorServiceManager {
+        return managerSingleton
+    }
     
     // advertiser
     private var serviceAdvertiser : MCNearbyServiceAdvertiser
