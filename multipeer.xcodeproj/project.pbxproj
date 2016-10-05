@@ -13,6 +13,7 @@
 		4F1AFF571DA3FA5900C5D425 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1AFF561DA3FA5900C5D425 /* Assets.xcassets */; };
 		4F1AFF5A1DA3FA5900C5D425 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F1AFF581DA3FA5900C5D425 /* LaunchScreen.storyboard */; };
 		4F1AFF651DA3FA5900C5D425 /* multipeerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1AFF641DA3FA5900C5D425 /* multipeerTests.swift */; };
+		4FE98B441DA54D0B00FA337A /* multipeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE98B431DA54D0B00FA337A /* multipeer.swift */; };
 		6EB341721DA512F40094FD55 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB341711DA512F40094FD55 /* Cell.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		4F1AFF601DA3FA5900C5D425 /* multipeerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = multipeerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1AFF641DA3FA5900C5D425 /* multipeerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multipeerTests.swift; sourceTree = "<group>"; };
 		4F1AFF661DA3FA5900C5D425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FE98B431DA54D0B00FA337A /* multipeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = multipeer.swift; sourceTree = "<group>"; };
 		6EB341711DA512F40094FD55 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 			children = (
 				4F1AFF4F1DA3FA5900C5D425 /* AppDelegate.swift */,
 				4F1AFF511DA3FA5900C5D425 /* ViewController.swift */,
+				4FE98B431DA54D0B00FA337A /* multipeer.swift */,
 				4F1AFF531DA3FA5900C5D425 /* Main.storyboard */,
 				4F1AFF561DA3FA5900C5D425 /* Assets.xcassets */,
 				4F1AFF581DA3FA5900C5D425 /* LaunchScreen.storyboard */,
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F1AFF521DA3FA5900C5D425 /* ViewController.swift in Sources */,
+				4FE98B441DA54D0B00FA337A /* multipeer.swift in Sources */,
 				4F1AFF501DA3FA5900C5D425 /* AppDelegate.swift in Sources */,
 				6EB341721DA512F40094FD55 /* Cell.swift in Sources */,
 			);
