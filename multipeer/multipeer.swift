@@ -16,11 +16,8 @@ class ColorServiceManager: NSObject {
 
     static var managerSingleton = ColorServiceManager()
     static func getHASingleton() -> ColorServiceManager {
-<<<<<<< Updated upstream
         return managerSingleton
-=======
-            return managerSingleton
->>>>>>> Stashed changes
+
     }
     
     // advertiser
@@ -69,14 +66,14 @@ class ColorServiceManager: NSObject {
         }
     }*/
     
-    var mcSession: MCSession!
+//    var mcSession: MCSession!
     func sendImage(img: UIImage) {
         print(">>>>>>>>>>>>>>>ENTREI")
-        if mcSession.connectedPeers.count > 0 {
-            print("CONNECTED PEERS: \(mcSession.connectedPeers.count)")
+        if session.connectedPeers.count > 0 {
+            print("CONNECTED PEERS: \(session.connectedPeers.count)") // ATE AQUI FOI!!!!
             if let imageData = UIImagePNGRepresentation(img) {
                 do {
-                    try mcSession.send(imageData, toPeers: mcSession.connectedPeers, with: .reliable)
+                    try self.session.send(imageData, toPeers: session.connectedPeers, with: MCSessionSendDataMode.reliable)
                 } catch let error as NSError {
                     let ac = UIAlertController(title: "Send error", message: error.localizedDescription, preferredStyle: .alert)
                     ac.addAction(UIAlertAction(title: "OK", style: .default))
