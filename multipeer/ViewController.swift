@@ -16,6 +16,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     let manager = ColorServiceManager ()
     var managerSingleton = ColorServiceManager.getHASingleton()
+    var valueToPass: UIImage!
 
     @IBAction func reloadButton(_ sender: AnyObject) {
             self.collection.reloadData()
@@ -72,6 +73,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         manager.sendImage(img: image)
         //self.collection.reloadData()
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        valueToPass = managerSingleton.images[indexPath.row]
+        performSegue(withIdentifier: "DetailView", sender: self)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "DetailView" {
+            
+            let destinationViewController = segue.destination as! DetailViewController
+            destinationViewController.passedValue = valueToPass
+        }
     }
 
 }

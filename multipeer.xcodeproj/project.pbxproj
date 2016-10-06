@@ -15,6 +15,7 @@
 		4F1AFF651DA3FA5900C5D425 /* multipeerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1AFF641DA3FA5900C5D425 /* multipeerTests.swift */; };
 		4FE98B441DA54D0B00FA337A /* multipeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE98B431DA54D0B00FA337A /* multipeer.swift */; };
 		6EB341721DA512F40094FD55 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB341711DA512F40094FD55 /* Cell.swift */; };
+		6EB3418F1DA6F2920094FD55 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3418E1DA6F2920094FD55 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		4F1AFF661DA3FA5900C5D425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FE98B431DA54D0B00FA337A /* multipeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = multipeer.swift; sourceTree = "<group>"; };
 		6EB341711DA512F40094FD55 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		6EB3418E1DA6F2920094FD55 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				4F1AFF4F1DA3FA5900C5D425 /* AppDelegate.swift */,
+				6EB3418E1DA6F2920094FD55 /* DetailViewController.swift */,
 				4F1AFF511DA3FA5900C5D425 /* ViewController.swift */,
 				4FE98B431DA54D0B00FA337A /* multipeer.swift */,
 				4F1AFF531DA3FA5900C5D425 /* Main.storyboard */,
@@ -208,6 +211,7 @@
 			files = (
 				4F1AFF521DA3FA5900C5D425 /* ViewController.swift in Sources */,
 				4FE98B441DA54D0B00FA337A /* multipeer.swift in Sources */,
+				6EB3418F1DA6F2920094FD55 /* DetailViewController.swift in Sources */,
 				4F1AFF501DA3FA5900C5D425 /* AppDelegate.swift in Sources */,
 				6EB341721DA512F40094FD55 /* Cell.swift in Sources */,
 			);
