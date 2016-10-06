@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-Hw-dRf">
-                                <state key="normal" title="Reload Data"/>
+                                <state key="normal" backgroundImage="save"/>
                                 <connections>
                                     <action selector="reloadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dK0-yv-MhX"/>
                                 </connections>
@@ -73,12 +73,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="zJr-Hw-dRf" firstAttribute="width" secondItem="gW3-Sn-Tcj" secondAttribute="width" id="3kq-Dr-I5U"/>
                             <constraint firstItem="gW3-Sn-Tcj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="D7y-3s-iBA"/>
                             <constraint firstItem="kfu-WC-g0o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Nm8-He-zo4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kfu-WC-g0o" secondAttribute="bottom" constant="20" id="Vu5-r1-FKR"/>
+                            <constraint firstItem="zJr-Hw-dRf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YOr-nQ-4NC"/>
                             <constraint firstItem="zJr-Hw-dRf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aZv-g7-IGy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gW3-Sn-Tcj" secondAttribute="bottom" constant="20" id="f5V-aC-eG0"/>
                             <constraint firstItem="kfu-WC-g0o" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="g8U-cS-sn6"/>
+                            <constraint firstItem="zJr-Hw-dRf" firstAttribute="height" secondItem="gW3-Sn-Tcj" secondAttribute="height" id="hWi-r5-6kz"/>
                             <constraint firstItem="zJr-Hw-dRf" firstAttribute="centerY" secondItem="gW3-Sn-Tcj" secondAttribute="centerY" id="kva-m4-eFh"/>
                             <constraint firstItem="kfu-WC-g0o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zg9-WC-GLi"/>
                         </constraints>
@@ -149,5 +152,6 @@
     </scenes>
     <resources>
         <image name="camera_button" width="79" height="79"/>
+        <image name="save" width="81" height="81"/>
     </resources>
 </document>
